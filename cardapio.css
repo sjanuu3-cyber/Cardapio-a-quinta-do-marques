@@ -40,7 +40,7 @@
 nav {
     background-color: #ff0000;
     padding: 15px;
-
+    border-radius: 0 0 15px 15px;
 }
 
 .header {
@@ -50,7 +50,7 @@ nav {
     color: white;
 }
 
-/* LOGO (esquerda) */
+/* LOGO */
 .logo {
     display: flex;
     align-items: center;
@@ -69,14 +69,14 @@ nav {
     color: white;
 }
 
-/* MENU (centro) */
+/* MENU */
 .menu {
     display: flex;
     gap: 15px;
     justify-self: center;
 }
 
-/* BOTÕES DO MENU */
+/* BOTÕES */
 .btn-menu {
     color: white;
     text-decoration: none;
@@ -87,19 +87,16 @@ nav {
     font-weight: 500;
 }
 
-/* HOVER CORRIGIDO */
 .btn-menu:hover {
     background: white;
-    color: #ff0000; /* 🔥 muda a cor do texto */
+    color: #ff0000;
     transform: translateY(-2px);
 }
 
-/* BOTÃO ATIVO */
 .btn-menu.ativo {
     background: white;
     color: #ff0000;
 }
-
 .dropdown {
   position: relative;
 }
@@ -425,3 +422,107 @@ nav {
     margin: 2rem 0 0;
     letter-spacing: 0.5rem;
   }
+
+  /* ================= RESPONSIVIDADE ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+  .header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .menu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .highlight-box {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .serving-header {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+
+  /* NAV */
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-menu {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* HEADER */
+  .header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* ITENS */
+  .item-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .item-row-multi {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .price {
+    text-align: left;
+  }
+
+  /* GRID */
+  .desserts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .caip-options {
+    grid-template-columns: 1fr;
+  }
+
+  .side-box {
+    grid-template-columns: 1fr;
+  }
+
+  /* DESTAQUE */
+  .highlight-box {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-box img {
+    width: 100%;
+  }
+
+  /* TEXTO */
+  .section-title {
+    font-size: 20px;
+  }
+
+  .Hcenter {
+    font-size: 24px;
+  }
+
+}

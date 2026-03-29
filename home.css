@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* BODY */
+/* ================= BODY ================= */
 body {
     font-family: 'Poppins', sans-serif;
 
@@ -33,7 +33,7 @@ nav {
     color: white;
 }
 
-/* LOGO (esquerda) */
+/* LOGO */
 .logo {
     display: flex;
     align-items: center;
@@ -52,14 +52,14 @@ nav {
     color: white;
 }
 
-/* MENU (centro) */
+/* MENU */
 .menu {
     display: flex;
     gap: 15px;
     justify-self: center;
 }
 
-/* BOTÕES DO MENU */
+/* BOTÕES */
 .btn-menu {
     color: white;
     text-decoration: none;
@@ -70,14 +70,12 @@ nav {
     font-weight: 500;
 }
 
-/* HOVER CORRIGIDO */
 .btn-menu:hover {
     background: white;
-    color: #ff0000; /* 🔥 muda a cor do texto */
+    color: #ff0000;
     transform: translateY(-2px);
 }
 
-/* BOTÃO ATIVO */
 .btn-menu.ativo {
     background: white;
     color: #ff0000;
@@ -94,13 +92,16 @@ nav {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
-/* ================= SOBRE NOS ================= */
+
+/* ================= SOBRE NÓS ================= */
+
 .header-home {
-    background: rgba(255,255,255,0.8);
-    padding: 20px;
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
     border-radius: 15px;
     margin: 40px auto;
     max-width: 1000px;
+    line-height: 1.6;
 }
 
 .sobre-nos {
@@ -115,10 +116,8 @@ nav {
 .Pcenteer {
     text-align: center;
     color: #555;
-    font-size: 20px;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 0 auto;
+    font-size: 18px;
+    margin-top: 20px;
 }
 
 /* ================= HOME ================= */
@@ -126,11 +125,10 @@ nav {
 .home {
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 40px;
 }
 
-/* CONTAINER DOS CARDS */
+/* CONTAINER */
 .cards-home {
     display: flex;
     gap: 20px;
@@ -146,12 +144,12 @@ nav {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
-    width: 600px;
+    max-width: 600px; /* 🔥 CORRIGIDO */
+    width: 100%;
     height: 220px;
     transition: 0.3s;
 }
 
-/* HOVER DO CARD */
 .destaque2:hover {
     transform: scale(1.03);
 }
@@ -165,7 +163,7 @@ nav {
 
 /* TEXTO */
 .info2 {
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,6 +174,74 @@ nav {
 }
 
 .info2 p {
-    margin-bottom: 15px;
     color: #555;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVO ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .dst {
+        font-size: 28px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+
+    /* MENU */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* SOBRE */
+    .header-home {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    /* CARDS */
+    .destaque2 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .destaque2 img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .info2 {
+        padding: 15px;
+    }
+
+    .info2 p {
+        font-size: 13px;
+    }
+
+    .dst {
+        font-size: 22px;
+    }
 }
