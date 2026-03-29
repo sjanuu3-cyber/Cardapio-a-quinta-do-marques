@@ -245,3 +245,107 @@ nav {
         font-size: 22px;
     }
 }
+
+/* ================= RESPONSIVIDADE ================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+  .header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .menu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .highlight-box {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .serving-header {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+
+  /* NAV */
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-menu {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* HEADER */
+  .header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* ITENS */
+  .item-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .item-row-multi {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .price {
+    text-align: left;
+  }
+
+  /* GRID */
+  .desserts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .caip-options {
+    grid-template-columns: 1fr;
+  }
+
+  .side-box {
+    grid-template-columns: 1fr;
+  }
+
+  /* DESTAQUE */
+  .highlight-box {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-box img {
+    width: 100%;
+  }
+
+  /* TEXTO */
+  .section-title {
+    font-size: 20px;
+  }
+
+  .Hcenter {
+    font-size: 24px;
+  }
+
+}
