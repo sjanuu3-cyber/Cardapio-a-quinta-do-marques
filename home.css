@@ -8,10 +8,7 @@
 /* ================= BODY ================= */
 body {
     font-family: 'Poppins', sans-serif;
-
-    background: 
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,7 +16,6 @@ body {
 }
 
 /* ================= NAVBAR ================= */
-
 nav {
     background-color: #ff0000;
     padding: 15px;
@@ -65,7 +61,7 @@ nav {
     text-decoration: none;
     padding: 8px 18px;
     border-radius: 20px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     transition: 0.3s;
     font-weight: 500;
 }
@@ -82,7 +78,6 @@ nav {
 }
 
 /* ================= TÍTULO ================= */
-
 .dst {
     text-align: center;
     color: #f1b34f;
@@ -94,9 +89,8 @@ nav {
 }
 
 /* ================= SOBRE NÓS ================= */
-
 .header-home {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     padding: 25px;
     border-radius: 15px;
     margin: 40px auto;
@@ -121,7 +115,6 @@ nav {
 }
 
 /* ================= HOME ================= */
-
 .home {
     display: flex;
     justify-content: center;
@@ -137,14 +130,13 @@ nav {
 }
 
 /* ================= CARDS ================= */
-
 .destaque2 {
     display: flex;
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
-    max-width: 600px; /* 🔥 CORRIGIDO */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
     width: 100%;
     height: 220px;
     transition: 0.3s;
@@ -178,9 +170,7 @@ nav {
     font-size: 14px;
 }
 
-/* ================= RESPONSIVO ================= */
-
-/* TABLET */
+/* ================= RESPONSIVIDADE ================= */
 @media (max-width: 1024px) {
     .header {
         grid-template-columns: 1fr;
@@ -200,15 +190,21 @@ nav {
     .dst {
         font-size: 28px;
     }
+
+    .header-home {
+        margin: 30px;
+    }
+
+    .cards-home {
+        gap: 15px;
+    }
 }
 
-/* CELULAR */
 @media (max-width: 768px) {
-
-    /* MENU */
     .menu {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
 
     .btn-menu {
@@ -216,13 +212,25 @@ nav {
         text-align: center;
     }
 
-    /* SOBRE */
+    .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
     .header-home {
-        margin: 20px;
+        margin: 15px;
         padding: 15px;
     }
 
-    /* CARDS */
+    .Pcenteer {
+        font-size: 16px;
+    }
+
+    .cards-home {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .destaque2 {
         flex-direction: column;
         height: auto;
@@ -244,108 +252,4 @@ nav {
     .dst {
         font-size: 22px;
     }
-}
-
-/* ================= RESPONSIVIDADE ================= */
-
-/* TABLET */
-@media (max-width: 1024px) {
-
-  .header {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .logo {
-    justify-content: center;
-  }
-
-  .menu {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .highlight-box {
-    grid-template-columns: 1fr;
-  }
-
-  .container {
-    padding: 20px;
-  }
-
-  .serving-header {
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-  }
-
-}
-
-/* CELULAR */
-@media (max-width: 768px) {
-
-  /* NAV */
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .btn-menu {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* HEADER */
-  .header {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  /* ITENS */
-  .item-row {
-    grid-template-columns: 1fr;
-    gap: 5px;
-  }
-
-  .item-row-multi {
-    grid-template-columns: 1fr;
-    gap: 5px;
-  }
-
-  .price {
-    text-align: left;
-  }
-
-  /* GRID */
-  .desserts-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .caip-options {
-    grid-template-columns: 1fr;
-  }
-
-  .side-box {
-    grid-template-columns: 1fr;
-  }
-
-  /* DESTAQUE */
-  .highlight-box {
-    grid-template-columns: 1fr;
-  }
-
-  .highlight-box img {
-    width: 100%;
-  }
-
-  /* TEXTO */
-  .section-title {
-    font-size: 20px;
-  }
-
-  .Hcenter {
-    font-size: 24px;
-  }
-
 }

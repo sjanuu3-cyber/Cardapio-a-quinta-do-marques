@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cardápio — A Quinta do Marquês</title>
-<link rel="stylesheet" href="cardapio.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio — A Quinta do Marquês</title>
 
+  <link rel="stylesheet" href="cardapio.css">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="estrutura.js" defer></script>
 </head>
+
 <body>
 
-    <nav>
+<!-- ================= NAVBAR ================= -->
+<nav>
   <div class="header">
 
     <div class="logo">
@@ -20,19 +25,33 @@
 
     <div class="menu">
       <a href="index.html" class="btn-menu">Home</a> 
+
       <div class="dropdown">
-  <a href="#" class="btn-menu ativo">Cardápio ▾</a>
+  <button class="btn-menu dropdown-toggle">
+    Cardápio ▾
+  </button>
+
   <div class="dropdown-menu">
-    <a href="cardapio.html">À La Carte</a>
-    <a href="copa.html">Copa - Lanches</a>
+    <a href="cardapio.html">🍽️ À La Carte</a>
+    <a href="copa.html">🥪 Copa - Lanches</a>
   </div>
 </div>
+
       <a href="#" class="btn-menu">Contato</a>
     </div>
 
   </div>
 </nav>
+
+<!-- ================= TÍTULO ================= -->
 <header class="Hcenter">A LA CARTE</header>
+
+<div class="menu-switch">
+  <a href="cardapio.html" class="switch-btn active">🍽️ À La Carte</a>
+  <a href="copa.html" class="switch-btn">🥪 Copa - Lanches</a>
+</div>
+
+
 
 <nav class="nav">
   <a href="#entradas">Entradas</a>
